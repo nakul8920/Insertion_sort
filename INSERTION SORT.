@@ -1,0 +1,12 @@
+#Topic 1 = INSERTION SORT.
+def insertion_sort(arr):
+    for i in range(1, len(arr)):
+        key = arr[i]
+        pos = i - 1
+        while pos >= 0 and key < arr[pos]:
+            arr[pos + 1] = arr[pos]
+            pos -= 1
+        arr[pos + 1] = key
+myarray = [23,78,9,43,67,76]
+insertion_sort(myarray)
+print("Sorted array:", myarray)
